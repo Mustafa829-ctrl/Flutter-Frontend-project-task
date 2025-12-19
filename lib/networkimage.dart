@@ -21,7 +21,7 @@ class Networkimage extends StatelessWidget {
         ],
       ),
       body: Container(
-        padding: const EdgeInsets.only(top: 10,bottom: 10,left: 80,right: 30),
+        padding: const EdgeInsets.only(top: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -39,8 +39,7 @@ class Networkimage extends StatelessWidget {
             SizedBox(height: 20),
             Image.network(
               'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJeJGPaGCkFnSb_1-NDwNhvcJA58-WSctYfw&s',
-              width: 300,
-              height: 300,
+              width: 200,
               fit: BoxFit.fill,
             ),
             SizedBox(height: 20),
