@@ -30,7 +30,8 @@ class _LoginState extends State<signup> {
           Icon(Icons.notifications,size: 45, color: Colors.purple,),
         ],
       ),
-      body: Column(children: [
+      body: Column(
+        children: [
         Text("Welcome to Registration Form"),
         Text("Sign Up"),
         Padding(
@@ -161,8 +162,26 @@ class _LoginState extends State<signup> {
                 SnackBar(content: Text("contact must be 11 digit")));
             return;
           }
+          showDialog(
+            barrierDismissible: false,
+            context: context,
+            builder: (BuildContext context) {
+              return AlertDialog(
+                title: Text("Thank You!"),
+                content: Text("Go to Login Screen ?"),
+                actions: [
+                  TextButton(onPressed: (){
+                    Navigator.pop(context);
+                  }, child: Text("NO")),
+                  TextButton(onPressed: (){
+                    Navigator.pop(context);
+                  }, child: Text("Yes")),
+                ],
+              );
+            }, );
         },
-            child: Text("Sign Up")),
+            child: Text("Sign Up")
+        ),
         Text("Already have Account ?"),
         TextButton(onPressed: (){}, child: Text("Login"))
       ],),
